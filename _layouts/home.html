@@ -1,12 +1,12 @@
+Here is the final HTML code, cleaned up and customized for **Andrei Patularu** with the exact sections you requested, keeping the initial professional layout and removing any childish elements or references to Dialid.
+```html
 <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Andrei Patularu — Matematică, Cod & Curiozitate</title>
-    <!-- Font Awesome 6 (free icons) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrei Patularu — Matematică, Programare & Educație</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: clean, friendly sans-serif -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -23,30 +23,25 @@
             scroll-behavior: smooth;
         }
 
-        /* custom color palette (friendly & vibrant) */
         :root {
             --primary: #1f6e8c;
             --primary-dark: #0e4b64;
-            --accent-coral: #e76f51;
-            --accent-gold: #f4a261;
-            --accent-teal: #2a9d8f;
-            --accent-rose: #e9c46a;
-            --soft-bg: #fffaf3;
-            --card-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
-            --border-light: #f0e5d8;
+            --accent: #e76f51;
+            --gray-light: #f0e5d8;
+            --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
         .container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* ===== HEADER / NAV ===== */
+        /* Header */
         .site-header {
             background: rgba(255, 250, 243, 0.96);
             backdrop-filter: blur(8px);
-            border-bottom: 1px solid #f0e2d4;
+            border-bottom: 1px solid var(--gray-light);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -61,69 +56,56 @@
             gap: 1rem;
         }
 
-        .logo-area a {
+        .logo a {
             font-weight: 700;
             font-size: 1.4rem;
             text-decoration: none;
             color: var(--primary-dark);
             letter-spacing: -0.3px;
-            transition: color 0.2s;
         }
 
-        .logo-area a:hover {
-            color: var(--accent-coral);
+        .logo a:hover {
+            color: var(--accent);
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.8rem;
             flex-wrap: wrap;
             list-style: none;
         }
 
-        .nav-links li a {
+        .nav-links a {
             text-decoration: none;
             font-weight: 500;
             color: #2c3e4e;
-            transition: 0.2s;
             font-size: 0.95rem;
-            letter-spacing: -0.2px;
-            padding: 0.2rem 0;
+            transition: 0.2s;
             border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
         }
 
-        .nav-links li a:hover {
+        .nav-links a:hover {
             color: var(--primary);
-            border-bottom-color: var(--accent-gold);
+            border-bottom-color: var(--accent);
         }
 
-        .search-icon a {
-            font-size: 1.2rem;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        /* ===== HERO SECTION ===== */
+        /* Hero */
         .hero {
-            padding: 4rem 0 4rem 0;
+            padding: 4rem 0 5rem;
             background: linear-gradient(135deg, #fff6ed 0%, #fffef9 100%);
-            border-radius: 0 0 2rem 2rem;
         }
 
         .hero-content {
-            max-width: 880px;
-            margin: 0 auto;
+            max-width: 800px;
         }
 
         .hero-name {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            background: linear-gradient(125deg, #1f6e8c, #2c9b7a);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            color: #1a3a47;
             margin-bottom: 1rem;
         }
 
@@ -132,9 +114,9 @@
             font-weight: 600;
             color: #c45c2c;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             margin-bottom: 1.5rem;
-            border-left: 4px solid var(--accent-coral);
+            border-left: 4px solid var(--accent);
             padding-left: 1rem;
         }
 
@@ -145,61 +127,50 @@
             line-height: 1.6;
         }
 
-        .action-row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 0.5rem;
-        }
-
         .btn-more {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
             background: var(--primary);
             color: white;
-            padding: 0.75rem 2rem;
+            padding: 0.7rem 1.8rem;
             border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 10px rgba(31,110,140,0.2);
+            transition: 0.2s;
         }
 
         .btn-more:hover {
-            background: var(--accent-coral);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 20px -12px rgba(231,111,81,0.4);
+            background: var(--accent);
+            transform: translateY(-2px);
         }
 
         .social-icons {
             display: flex;
             gap: 1.2rem;
+            margin-top: 1rem;
         }
 
-        .social-icon {
-            font-size: 1.6rem;
+        .social-icons a {
+            font-size: 1.5rem;
             color: #3f5e6b;
-            transition: all 0.2s;
+            transition: 0.2s;
         }
 
-        .social-icon:hover {
+        .social-icons a:hover {
             color: var(--primary);
-            transform: scale(1.08);
         }
 
-        /* ===== SECTION STYLES ===== */
-        .content-section {
-            padding: 4rem 0 3rem 0;
-            border-bottom: 1px solid #f2e4d8;
+        /* Sections */
+        .section {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--gray-light);
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.3px;
+            margin-bottom: 0.5rem;
             position: relative;
             display: inline-block;
         }
@@ -207,161 +178,131 @@
         .section-title:after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 0;
-            width: 60px;
+            width: 50px;
             height: 3px;
-            background: var(--accent-gold);
-            border-radius: 3px;
+            background: var(--accent);
         }
 
         .section-sub {
             color: #5f6c7a;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             font-size: 1rem;
         }
 
-        /* cards grid */
+        /* Cards grid */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         .card {
             background: white;
-            border-radius: 24px;
-            padding: 1.6rem;
+            border-radius: 20px;
+            padding: 1.5rem;
             box-shadow: var(--card-shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s;
-            border: 1px solid #f6ede5;
+            border: 1px solid #f3ede5;
+            transition: 0.2s;
         }
 
         .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 36px -12px rgba(0, 0, 0, 0.12);
-        }
-
-        .card-icon {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            display: inline-block;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
 
         .card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin: 0.5rem 0 0.75rem;
             color: #1f3b44;
         }
 
         .card p {
             color: #4a5b68;
-            line-height: 1.5;
             font-size: 0.95rem;
-        }
-
-        .tag-list {
-            margin-top: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            line-height: 1.5;
         }
 
         .tag {
-            background: #f3ede7;
-            padding: 0.25rem 0.8rem;
-            border-radius: 40px;
-            font-size: 0.75rem;
+            display: inline-block;
+            background: #f0e5dc;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
             font-weight: 500;
+            margin-right: 0.5rem;
+            margin-top: 0.75rem;
             color: #6f4e2e;
         }
 
-        /* resource list style (for matematica) */
+        /* Resource list (for Matematica section) */
         .resource-list {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1rem;
         }
+
         .resource-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             background: white;
-            padding: 1rem 1.4rem;
+            padding: 1rem 1.5rem;
             border-radius: 60px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 1px solid #f0e5d8;
             transition: 0.2s;
-            border: 1px solid #f1e5db;
         }
+
         .resource-item i {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--primary);
             width: 2rem;
         }
+
         .resource-item span {
-            font-weight: 500;
-            font-size: 1rem;
             flex: 1;
-        }
-        .resource-item small {
-            color: #a18262;
-            font-size: 0.8rem;
-        }
-        .resource-item:hover {
-            background: #fffcf8;
-            transform: translateX(6px);
-            border-color: var(--accent-gold);
+            font-weight: 500;
         }
 
-        .bg-soft-math {
-            background: linear-gradient(110deg, #fef9f2, #ffffff);
+        .resource-item small {
+            color: #a18262;
+            font-size: 0.75rem;
         }
-        .bg-soft-app {
-            background: linear-gradient(110deg, #f6fafc, #ffffff);
-        }
-        .bg-soft-misc {
-            background: linear-gradient(110deg, #fef7ec, #ffffff);
+
+        .resource-item:hover {
+            background: #fefaf5;
+            transform: translateX(4px);
+            border-color: var(--accent);
         }
 
         .footer {
-            padding: 2.5rem 0 3rem;
+            padding: 2.5rem 0;
             text-align: center;
             color: #8a7a6a;
             font-size: 0.85rem;
-            border-top: 1px solid #f0e4d6;
-            margin-top: 2rem;
+            border-top: 1px solid var(--gray-light);
         }
 
-        @media (max-width: 780px) {
+        @media (max-width: 768px) {
             .container {
                 padding: 0 1.5rem;
             }
             .hero-name {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             .nav-links {
                 gap: 1rem;
-            }
-            .section-title {
-                font-size: 1.7rem;
             }
             .card-grid {
                 grid-template-columns: 1fr;
             }
         }
-        @media (max-width: 480px) {
-            .hero-name {
-                font-size: 2.2rem;
-            }
-            .nav-links li a {
-                font-size: 0.8rem;
-            }
-        }
 
         [id] {
-            scroll-margin-top: 90px;
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
@@ -369,23 +310,22 @@
 
 <header class="site-header">
     <div class="container nav-wrapper">
-        <div class="logo-area">
-            <a href="#home"><i class="fas fa-infinity"></i> Andrei P.</a>
+        <div class="logo">
+            <a href="#home">Andrei Patularu</a>
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#posts">Posts</a></li>
-            <li><a href="#matematica">Matematica liceu & olimpiada</a></li>
-            <li><a href="#applications">Applications of Math</a></li>
+            <li><a href="#matematica">Matematica Liceu & Olimp.</a></li>
+            <li><a href="#applications">App of Math</a></li>
             <li><a href="#misc">Misceláneos</a></li>
-            <li class="search-icon"><a href="#" aria-label="Search"><i class="fas fa-search"></i></a></li>
         </ul>
     </div>
 </header>
 
 <main>
-    <!-- Hero / Home section -->
+    <!-- Home / Hero -->
     <section id="home" class="hero">
         <div class="container hero-content">
             <h1 class="hero-name">Andrei Patularu</h1>
@@ -393,158 +333,156 @@
                 MATEMATICIAN | PROFESOR | PROGRAMATOR | OLIMPIADIC
             </div>
             <p class="hero-description">
-                Îmi pasionează matematica, programarea și educația. Lucrez la intersecția dintre teorie și aplicații practice, 
-                iar în timpul liber creez resurse open-source pentru pregătirea olimpiadelor, proiecte de analiză de date și 
+                Îmi pasionează matematica, programarea și educația. Lucrez la intersecția dintre teorie și aplicații practice,
+                iar în timpul liber creez resurse open-source pentru pregătirea olimpiadelor, proiecte de analiză de date și
                 vizualizare interactivă. Cred într-o matematică vie, accesibilă și mereu plină de curiozitate.
             </p>
-            <div class="action-row">
-                <a href="#about" class="btn-more">
-                    Mai multe despre mine <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="social-icons">
-                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
+            <div>
+                <a href="#about" class="btn-more">Mai multe despre mine <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- About section -->
-    <section id="about" class="content-section">
+    <!-- About -->
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">Despre mine</h2>
+            <h2 class="section-title">About me</h2>
             <div class="section-sub">Matematician, educator și pasionat de cod</div>
-            <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+            <div class="card-grid">
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-chalkboard-user" style="color: #e76f51;"></i></div>
-                    <h3>Predare & olimpiade</h3>
-                    <p>Peste 10 ani de experiență în pregătirea loturilor de matematică, atât pentru liceu, cât și pentru gimnaziu. Lecții interactive și materiale structurate.</p>
+                    <i class="fas fa-chalkboard-user" style="font-size: 2rem; color: #e76f51;"></i>
+                    <h3>Research & teaching</h3>
+                    <p>Doctorand în statistică cu focus pe procese stochastice. Pasionat să fac matematica avansată accesibilă prin exemple din lumea reală și predare interactivă.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-chart-line" style="color: #2a9d8f;"></i></div>
-                    <h3>Data science & aplicații</h3>
-                    <p>Proiecte în Python, R și Julia pentru modelare matematică, statistică și machine learning. Folosesc datele pentru a spune povești.</p>
+                    <i class="fas fa-chart-line" style="font-size: 2rem; color: #2a9d8f;"></i>
+                    <h3>Quant & coding</h3>
+                    <p>Dezvoltator cantitativ, construind modele pentru risc, derivate și trading algoritmic. Cod curat și matematică riguroasă.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-heart" style="color: #f4a261;"></i></div>
-                    <h3>Open source & comunitate</h3>
-                    <p>Autor de biblioteci pentru vizualizarea demonstrațiilor matematice și instrumente de pregătire pentru concursuri. Toate resursele sunt gratuite.</p>
+                    <i class="fas fa-heart" style="font-size: 2rem; color: #f4a261;"></i>
+                    <h3>Open source & community</h3>
+                    <p>Creator de biblioteci Python/Julia pentru vizualizare, optimizare și probleme de tip olimpiadă. Toate resursele sunt gratuite.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Posts section (blog) -->
-    <section id="posts" class="content-section bg-soft-math">
+    <!-- Posts -->
+    <section id="posts" class="section">
         <div class="container">
-            <h2 class="section-title">Articole recente</h2>
+            <h2 class="section-title">Latest Posts</h2>
             <div class="section-sub">Idei noi, probleme interesante și reflecții despre matematică și programare</div>
             <div class="card-grid">
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                    <i class="fas fa-calculator" style="font-size: 2rem; color: #1f6e8c;"></i>
                     <h3>Inegalități elegante</h3>
                     <p>Metode clasice și tehnici moderne pentru inegalități în concursuri. Aplicații în geometrie și algebră.</p>
-                    <div class="tag-list"><span class="tag">olimpiadă</span><span class="tag">algebră</span></div>
+                    <div><span class="tag">olimpiadă</span><span class="tag">algebră</span></div>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-chart-simple"></i></div>
+                    <i class="fas fa-chart-simple" style="font-size: 2rem; color: #1f6e8c;"></i>
                     <h3>Simulări Monte Carlo în finanțe</h3>
                     <p>De la evaluarea opțiunilor la analiza riscului: implementări eficiente în Python și C++.</p>
-                    <div class="tag-list"><span class="tag">finanțe</span><span class="tag">coding</span></div>
+                    <div><span class="tag">finanțe</span><span class="tag">coding</span></div>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <i class="fas fa-brain" style="font-size: 2rem; color: #1f6e8c;"></i>
                     <h3>Vizualizare dinamică în matematică</h3>
                     <p>Folosind D3.js și Manim pentru a aduce la viață teoreme, fractali și sisteme dinamice.</p>
-                    <div class="tag-list"><span class="tag">vizualizare</span><span class="tag">creativ</span></div>
+                    <div><span class="tag">vizualizare</span><span class="tag">creativ</span></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Matematica de liceu & olimpiada -->
-    <section id="matematica" class="content-section">
+    <section id="matematica" class="section">
         <div class="container">
             <h2 class="section-title">Matematica de liceu & olimpiada</h2>
             <div class="section-sub">Resurse, probleme și metode pentru performanță în matematică</div>
             <div class="resource-list">
                 <div class="resource-item">
                     <i class="fas fa-square-root-alt"></i>
-                    <span><strong>Algebră & Analiză matematică</strong> — Inegalități, ecuații funcționale, șiruri, limite, integrale</span>
+                    <span><strong>Algebră & Analiză</strong> — Inegalități, ecuații funcționale, limite, integrale</span>
                     <small>teorie + probleme</small>
                 </div>
                 <div class="resource-item">
                     <i class="fas fa-shapes"></i>
-                    <span><strong>Geometrie (sintetică, vectorială, complexe)</strong> — Configurații remarcabile, puterea punctului, transformări geometrice</span>
-                    <small>olimpiadă națională</small>
+                    <span><strong>Geometrie sintetică & vectorială</strong> — Configurații remarcabile, puterea punctului, transformări</span>
+                    <small>probleme rezolvate</small>
                 </div>
                 <div class="resource-item">
                     <i class="fas fa-dice-d6"></i>
-                    <span><strong>Teoria numerelor & Combinatorică</strong> — Congruențe, invarianți, numere prime, probleme de numărare avansată</span>
-                    <small>loturi județene</small>
+                    <span><strong>Teoria numerelor & combinatorică</strong> — Congruențe, invarianți, numere prime, probleme de numărare</span>
+                    <small>olimpiadă națională</small>
                 </div>
                 <div class="resource-item">
                     <i class="fas fa-chalkboard"></i>
-                    <span><strong>Cursuri interactive + culegeri</strong> — Materiale PDF, lecții video și notebook-uri pentru pregătirea concursurilor</span>
-                    <small>acces liber</small>
+                    <span><strong>Lecții interactive + foi de lucru</strong> — Materiale pentru clasele IX-XII și pregătire avansată</span>
+                    <small>PDF & cod sursă</small>
                 </div>
             </div>
-            <div style="margin-top: 2rem; text-align: right;">
-                <a href="#" style="color: var(--primary); font-weight: 500;">Arhivă completă de probleme <i class="fas fa-arrow-right"></i></a>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" style="color: var(--primary); font-weight: 500;">Acces arhivă completă <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Applications of Math -->
-    <section id="applications" class="content-section bg-soft-app">
+    <section id="applications" class="section">
         <div class="container">
             <h2 class="section-title">Applications of Math</h2>
-            <div class="section-sub">Cum folosim matematica în lumea reală: finanțe, AI, inginerie</div>
+            <div class="section-sub">Where theory meets reality — quantitative finance, AI, engineering</div>
             <div class="card-grid">
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-chart-line" style="color: #1f6e8c;"></i></div>
+                    <i class="fas fa-chart-line" style="font-size: 2rem; color: #1f6e8c;"></i>
                     <h3>Quantitative Finance</h3>
-                    <p>Modelarea prețurilor, evaluarea derivatelor, strategii algoritmice – implementări practice.</p>
+                    <p>Stochastic calculus, risk management, algorithmic strategies — notebooks and live models.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-microchip" style="color: #e76f51;"></i></div>
-                    <h3>Optimizare & Machine Learning</h3>
-                    <p>Algoritmi de gradient, optimizare convexă, rețele neuronale din perspectivă matematică.</p>
+                    <i class="fas fa-microchip" style="font-size: 2rem; color: #1f6e8c;"></i>
+                    <h3>Optimization & ML</h3>
+                    <p>Gradient descent, convex optimisation, and neural networks from a mathematical lens.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-database" style="color: #2a9d8f;"></i></div>
-                    <h3>Știința datelor</h3>
-                    <p>Inferență statistică, metode bayesiene, vizualizare de date cu Plotly și Dash.</p>
+                    <i class="fas fa-database" style="font-size: 2rem; color: #1f6e8c;"></i>
+                    <h3>Data Science & Visualisation</h3>
+                    <p>Statistical inference, Bayesian methods, and beautiful visual storytelling with Plotly/D3.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Misceláneos -->
-    <section id="misc" class="content-section bg-soft-misc">
+    <section id="misc" class="section">
         <div class="container">
             <h2 class="section-title">Misceláneos</h2>
-            <div class="section-sub">Proiecte neașteptate, experimente vizuale și resurse curioase</div>
+            <div class="section-sub">Curiosity-driven projects, visual experiments & open-source tools</div>
             <div class="card-grid">
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-cubes"></i></div>
-                    <h3>Matematică & Artă</h3>
-                    <p>Arte generativă, fractali, atractori ciudați – unde codul întâlnește estetica.</p>
-                    <div class="tag-list"><span class="tag">creative coding</span></div>
+                    <i class="fas fa-cubes" style="font-size: 2rem; color: #1f6e8c;"></i>
+                    <h3>Math + Art</h3>
+                    <p>Generative art, L-systems, and chaotic attractors — where code meets creativity.</p>
+                    <div><span class="tag">creative coding</span></div>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Tool-uri educaționale</h3>
-                    <p>Bot de Telegram pentru antrenament la matematică, generatoare de grile și verificare demonstrații.</p>
+                    <i class="fas fa-robot" style="font-size: 2rem; color: #1f6e8c;"></i>
+                    <h3>Educational bots</h3>
+                    <p>Telegram & Discord bots that solve integrals, plot functions, and explain theorems.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fas fa-glasses"></i></div>
-                    <h3>Eseuri & reflecții</h3>
-                    <p>Despre didactică, filozofia matematicii și productivitate în cercetare.</p>
+                    <i class="fas fa-glasses" style="font-size: 2rem; color: #1f6e8c;"></i>
+                    <h3>Unconventional reads</h3>
+                    <p>Book notes, philosophy of math, and essays on productivity for researchers.</p>
                 </div>
             </div>
-            <div style="margin-top: 2rem; background: #fbf5ea; border-radius: 40px; padding: 1rem 1.8rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div style="margin-top: 2rem; background: #fbf5ea; border-radius: 40px; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                 <span><i class="fab fa-github"></i> <strong>github.com/andreipatularu</strong> — cod sursă pentru toate proiectele open-source</span>
                 <a href="#" style="color: var(--primary); font-weight: 500;">explorează <i class="fas fa-external-link-alt"></i></a>
             </div>
@@ -555,9 +493,10 @@
 <footer class="footer">
     <div class="container">
         <p>✦ matematică, cod & curiozitate — construit cu ❤️ de Andrei Patularu ✦</p>
-        <p style="margin-top: 0.5rem; font-size: 0.75rem;">© 2025 · toate resursele sunt liber accesibile</p>
+        <p style="margin-top: 0.5rem;">© 2025 · toate resursele sunt liber accesibile</p>
     </div>
 </footer>
 
 </body>
 </html>
+```
