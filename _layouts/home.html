@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+
+  <!-- MathJax -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      background: #f9f9f9;
+      color: #222;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 260px;
+      height: 100vh;
+      background: #111;
+      color: white;
+      padding: 30px 20px;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #bbb;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .section-title {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CONTENT */
+    .content {
+      margin-left: 280px;
+      padding: 60px;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border: 1px solid #333;
+      text-decoration: none;
+      color: #333;
+      transition: 0.2s;
+    }
+
+    a.button:hover {
+      background: #333;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>Andrei</h2>
+
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+
+  <div class="section-title">Mathematics</div>
+  <a href="/liceu/">Matematică (Liceu & Olimpiadă)</a>
+
+  <div class="section-title">Applied</div>
+  <a href="/applied/">Applied Mathematics</a>
+
+  <div class="section-title">Personal</div>
+  <a href="/beyond/">Beyond Mathematics</a>
+
+</div>
+
+<div class="content">
+  {{ content }}
+</div>
+
+</body>
+</html>
