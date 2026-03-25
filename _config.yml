@@ -1,3 +1,4 @@
-theme: minima
-title: My Math Blog
-description: Notes on probability and finance
+remote_theme: mmistakes/minimal-mistakes
+
+plugins:
+  - jekyll-include-cache
