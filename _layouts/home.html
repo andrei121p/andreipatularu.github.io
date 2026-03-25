@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Dialid Santiago — Math, Code & Curiosity</title>
+    <title>Andrei Patularu — Matematică, Cod & Curiozitate</title>
     <!-- Font Awesome 6 (free icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts: clean, friendly sans-serif -->
@@ -189,7 +189,7 @@
             transform: scale(1.08);
         }
 
-        /* ===== SECTION STYLES (fancy & friendly) ===== */
+        /* ===== SECTION STYLES ===== */
         .content-section {
             padding: 4rem 0 3rem 0;
             border-bottom: 1px solid #f2e4d8;
@@ -278,18 +278,7 @@
             color: #6f4e2e;
         }
 
-        /* special colorful backgrounds for different sections (soft accents) */
-        .bg-soft-math {
-            background: linear-gradient(110deg, #fef9f2, #ffffff);
-        }
-        .bg-soft-app {
-            background: linear-gradient(110deg, #f6fafc, #ffffff);
-        }
-        .bg-soft-misc {
-            background: linear-gradient(110deg, #fef7ec, #ffffff);
-        }
-
-        /* list style for resource sections */
+        /* resource list style (for matematica) */
         .resource-list {
             display: flex;
             flex-direction: column;
@@ -324,6 +313,16 @@
             background: #fffcf8;
             transform: translateX(6px);
             border-color: var(--accent-gold);
+        }
+
+        .bg-soft-math {
+            background: linear-gradient(110deg, #fef9f2, #ffffff);
+        }
+        .bg-soft-app {
+            background: linear-gradient(110deg, #f6fafc, #ffffff);
+        }
+        .bg-soft-misc {
+            background: linear-gradient(110deg, #fef7ec, #ffffff);
         }
 
         .footer {
@@ -361,7 +360,6 @@
             }
         }
 
-        /* scroll margin for fixed header */
         [id] {
             scroll-margin-top: 90px;
         }
@@ -372,14 +370,14 @@
 <header class="site-header">
     <div class="container nav-wrapper">
         <div class="logo-area">
-            <a href="#home"><i class="fas fa-infinity"></i> Dialid.dev</a>
+            <a href="#home"><i class="fas fa-infinity"></i> Andrei P.</a>
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#posts">Posts</a></li>
-            <li><a href="#matematica">Matematica Liceu & Olimp.</a></li>
-            <li><a href="#applications">App of Math</a></li>
+            <li><a href="#matematica">Matematica liceu & olimpiada</a></li>
+            <li><a href="#applications">Applications of Math</a></li>
             <li><a href="#misc">Misceláneos</a></li>
             <li class="search-icon"><a href="#" aria-label="Search"><i class="fas fa-search"></i></a></li>
         </ul>
@@ -390,81 +388,82 @@
     <!-- Hero / Home section -->
     <section id="home" class="hero">
         <div class="container hero-content">
-            <h1 class="hero-name">Dialid Santiago</h1>
+            <h1 class="hero-name">Andrei Patularu</h1>
             <div class="hero-titles">
-                MATHEMATICIAN | STATS PH.D. | QUANT | DEVELOPER
+                MATEMATICIAN | PROFESOR | PROGRAMATOR | OLIMPIADIC
             </div>
             <p class="hero-description">
-                I love maths, finance, and coding — and I work at the intersection of all three. 
-                In my free time, I enjoy creating open-source projects that explore mathematical models, 
-                data analysis, and visualisation, along with other topics that spark my curiosity.
+                Îmi pasionează matematica, programarea și educația. Lucrez la intersecția dintre teorie și aplicații practice, 
+                iar în timpul liber creez resurse open-source pentru pregătirea olimpiadelor, proiecte de analiză de date și 
+                vizualizare interactivă. Cred într-o matematică vie, accesibilă și mereu plină de curiozitate.
             </p>
             <div class="action-row">
                 <a href="#about" class="btn-more">
-                    More About Me <i class="fas fa-arrow-right"></i>
+                    Mai multe despre mine <i class="fas fa-arrow-right"></i>
                 </a>
                 <div class="social-icons">
                     <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#" class="social-icon" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About section (expanded) -->
+    <!-- About section -->
     <section id="about" class="content-section">
         <div class="container">
-            <h2 class="section-title">About me</h2>
-            <div class="section-sub">Mathematician, educator, and open-source enthusiast</div>
+            <h2 class="section-title">Despre mine</h2>
+            <div class="section-sub">Matematician, educator și pasionat de cod</div>
             <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-chalkboard-user" style="color: #e76f51;"></i></div>
-                    <h3>Research & teaching</h3>
-                    <p>PhD in Statistics with focus on stochastic processes. Passionate about making advanced math accessible through real‑world examples.</p>
+                    <h3>Predare & olimpiade</h3>
+                    <p>Peste 10 ani de experiență în pregătirea loturilor de matematică, atât pentru liceu, cât și pentru gimnaziu. Lecții interactive și materiale structurate.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-chart-line" style="color: #2a9d8f;"></i></div>
-                    <h3>Quant & coding</h3>
-                    <p>Quantitative developer building models for risk, derivatives, and algorithmic trading. Clean code, rigorous math.</p>
+                    <h3>Data science & aplicații</h3>
+                    <p>Proiecte în Python, R și Julia pentru modelare matematică, statistică și machine learning. Folosesc datele pentru a spune povești.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-heart" style="color: #f4a261;"></i></div>
-                    <h3>Open source & community</h3>
-                    <p>Creator of Python/Julia libraries for visualisation, optimization, and olympiad-style problems. Let’s learn together.</p>
+                    <h3>Open source & comunitate</h3>
+                    <p>Autor de biblioteci pentru vizualizarea demonstrațiilor matematice și instrumente de pregătire pentru concursuri. Toate resursele sunt gratuite.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Posts section (recent articles / blog) -->
+    <!-- Posts section (blog) -->
     <section id="posts" class="content-section bg-soft-math">
         <div class="container">
-            <h2 class="section-title">Latest Posts</h2>
-            <div class="section-sub">Fresh ideas from the intersection of math, code, and curiosity</div>
+            <h2 class="section-title">Articole recente</h2>
+            <div class="section-sub">Idei noi, probleme interesante și reflecții despre matematică și programare</div>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-calculator"></i></div>
-                    <h3>Inequalities unleashed</h3>
-                    <p>AM-GM, Cauchy-Schwarz, and Jensen — visual proofs and olympiad tricks with interactive demos.</p>
-                    <div class="tag-list"><span class="tag">olympiad</span><span class="tag">algebra</span></div>
+                    <h3>Inegalități elegante</h3>
+                    <p>Metode clasice și tehnici moderne pentru inegalități în concursuri. Aplicații în geometrie și algebră.</p>
+                    <div class="tag-list"><span class="tag">olimpiadă</span><span class="tag">algebră</span></div>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-chart-simple"></i></div>
-                    <h3>Monte Carlo for quants</h3>
-                    <p>From option pricing to risk metrics: implementing efficient simulations in Python and Rust.</p>
-                    <div class="tag-list"><span class="tag">finance</span><span class="tag">coding</span></div>
+                    <h3>Simulări Monte Carlo în finanțe</h3>
+                    <p>De la evaluarea opțiunilor la analiza riscului: implementări eficiente în Python și C++.</p>
+                    <div class="tag-list"><span class="tag">finanțe</span><span class="tag">coding</span></div>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Math visualisation</h3>
-                    <p>How to turn fractals, attractors, and dynamical systems into beautiful interactive art.</p>
-                    <div class="tag-list"><span class="tag">visualisation</span><span class="tag">creative</span></div>
+                    <h3>Vizualizare dinamică în matematică</h3>
+                    <p>Folosind D3.js și Manim pentru a aduce la viață teoreme, fractali și sisteme dinamice.</p>
+                    <div class="tag-list"><span class="tag">vizualizare</span><span class="tag">creativ</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Matematica de liceu & olimpiada section -->
+    <!-- Matematica de liceu & olimpiada -->
     <section id="matematica" class="content-section">
         <div class="container">
             <h2 class="section-title">Matematica de liceu & olimpiada</h2>
@@ -472,83 +471,82 @@
             <div class="resource-list">
                 <div class="resource-item">
                     <i class="fas fa-square-root-alt"></i>
-                    <span><strong>Algebră & Analiză</strong> — Inegalități, ecuații funcționale, limite și integrale explicate pas cu pas</span>
-                    <small>gimnaziu & olimpiadă</small>
+                    <span><strong>Algebră & Analiză matematică</strong> — Inegalități, ecuații funcționale, șiruri, limite, integrale</span>
+                    <small>teorie + probleme</small>
                 </div>
                 <div class="resource-item">
                     <i class="fas fa-shapes"></i>
-                    <span><strong>Geometrie sintetică & vectorială</strong> — Configurații remarcabile, puterea punctului, transformări</span>
-                    <small>probleme rezolvate</small>
-                </div>
-                <div class="resource-item">
-                    <i class="fas fa-dice-d6"></i>
-                    <span><strong>Teoria numerelor & combinatorică</strong> — Congruențe, invarianți, numere prime, probleme de numărare</span>
+                    <span><strong>Geometrie (sintetică, vectorială, complexe)</strong> — Configurații remarcabile, puterea punctului, transformări geometrice</span>
                     <small>olimpiadă națională</small>
                 </div>
                 <div class="resource-item">
+                    <i class="fas fa-dice-d6"></i>
+                    <span><strong>Teoria numerelor & Combinatorică</strong> — Congruențe, invarianți, numere prime, probleme de numărare avansată</span>
+                    <small>loturi județene</small>
+                </div>
+                <div class="resource-item">
                     <i class="fas fa-chalkboard"></i>
-                    <span><strong>Lecții interactive + foi de lucru</strong> — Materiale pentru clasele IX-XII și pregătire avansată</span>
-                    <small>PDF & cod sursă</small>
+                    <span><strong>Cursuri interactive + culegeri</strong> — Materiale PDF, lecții video și notebook-uri pentru pregătirea concursurilor</span>
+                    <small>acces liber</small>
                 </div>
             </div>
             <div style="margin-top: 2rem; text-align: right;">
-                <a href="#" style="color: var(--primary); font-weight: 500;">Acces arhivă completă <i class="fas fa-arrow-right"></i></a>
+                <a href="#" style="color: var(--primary); font-weight: 500;">Arhivă completă de probleme <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Applications of Math section -->
+    <!-- Applications of Math -->
     <section id="applications" class="content-section bg-soft-app">
         <div class="container">
             <h2 class="section-title">Applications of Math</h2>
-            <div class="section-sub">Where theory meets reality — quantitative finance, AI, engineering</div>
+            <div class="section-sub">Cum folosim matematica în lumea reală: finanțe, AI, inginerie</div>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-chart-line" style="color: #1f6e8c;"></i></div>
                     <h3>Quantitative Finance</h3>
-                    <p>Stochastic calculus, risk management, algorithmic strategies — notebooks and live models.</p>
+                    <p>Modelarea prețurilor, evaluarea derivatelor, strategii algoritmice – implementări practice.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-microchip" style="color: #e76f51;"></i></div>
-                    <h3>Optimization & ML</h3>
-                    <p>Gradient descent, convex optimisation, and neural networks from a mathematical lens.</p>
+                    <h3>Optimizare & Machine Learning</h3>
+                    <p>Algoritmi de gradient, optimizare convexă, rețele neuronale din perspectivă matematică.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-database" style="color: #2a9d8f;"></i></div>
-                    <h3>Data Science & Visualisation</h3>
-                    <p>Statistical inference, Bayesian methods, and beautiful visual storytelling with D3/Plotly.</p>
+                    <h3>Știința datelor</h3>
+                    <p>Inferență statistică, metode bayesiene, vizualizare de date cu Plotly și Dash.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Miscellaneous section (Miscelaneosu) -->
+    <!-- Misceláneos -->
     <section id="misc" class="content-section bg-soft-misc">
         <div class="container">
             <h2 class="section-title">Misceláneos</h2>
-            <div class="section-sub">Curiosity-driven projects, visual experiments & open-source tools</div>
+            <div class="section-sub">Proiecte neașteptate, experimente vizuale și resurse curioase</div>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-cubes"></i></div>
-                    <h3>Math + Art</h3>
-                    <p>Generative art, L-systems, and chaotic attractors — where code meets creativity.</p>
+                    <h3>Matematică & Artă</h3>
+                    <p>Arte generativă, fractali, atractori ciudați – unde codul întâlnește estetica.</p>
                     <div class="tag-list"><span class="tag">creative coding</span></div>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Educational bots</h3>
-                    <p>Telegram & Discord bots that solve integrals, plot functions, and explain theorems.</p>
+                    <h3>Tool-uri educaționale</h3>
+                    <p>Bot de Telegram pentru antrenament la matematică, generatoare de grile și verificare demonstrații.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-glasses"></i></div>
-                    <h3>Unconventional reads</h3>
-                    <p>Book notes, philosophy of math, and essays on productivity for researchers.</p>
+                    <h3>Eseuri & reflecții</h3>
+                    <p>Despre didactică, filozofia matematicii și productivitate în cercetare.</p>
                 </div>
             </div>
-            <!-- extra fun row: open-source highlight -->
             <div style="margin-top: 2rem; background: #fbf5ea; border-radius: 40px; padding: 1rem 1.8rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                <span><i class="fab fa-github"></i> <strong>github.com/dialidsantiago</strong> — 20+ repos exploring math models, visualisation, olympiad tools</span>
-                <a href="#" style="color: var(--primary); font-weight: 500;">explore <i class="fas fa-external-link-alt"></i></a>
+                <span><i class="fab fa-github"></i> <strong>github.com/andreipatularu</strong> — cod sursă pentru toate proiectele open-source</span>
+                <a href="#" style="color: var(--primary); font-weight: 500;">explorează <i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
     </section>
@@ -556,11 +554,10 @@
 
 <footer class="footer">
     <div class="container">
-        <p>✦ open-source thinker — mathematics, code & curiosity ✦ <br> Dialid Santiago — All ideas shared with ❤️</p>
-        <p style="margin-top: 0.5rem; font-size: 0.75rem;">© 2025 · built with curiosity & friendly math vibes</p>
+        <p>✦ matematică, cod & curiozitate — construit cu ❤️ de Andrei Patularu ✦</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem;">© 2025 · toate resursele sunt liber accesibile</p>
     </div>
 </footer>
 
-<!-- tiny smooth scroll behavior + active link effect not needed but functional -->
 </body>
 </html>
