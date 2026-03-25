@@ -1,92 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrei Pătularu — Mathematics & Quant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dialid Santiago — Mathematician & Quant Developer</title>
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: clean, modern sans-serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Font Awesome 6 for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f8;
+            color: #1a1a1a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Inter', sans-serif; background-color: #faf9f8; color:#111; line-height:1.6; }
+        /* container for consistent width */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    /* header/nav */
-    .site-header { padding:1.5rem 0; border-bottom:1px solid #eaeaea; position:sticky; top:0; background:rgba(255,255,255,0.96); backdrop-filter:blur(2px); z-index:10; }
-    .nav-wrapper { display:flex; justify-content:space-between; align-items:center; max-width:1280px; margin:0 auto; padding:0 2rem; flex-wrap:wrap; gap:1rem; }
-    .logo-area a { text-decoration:none; color:#111; font-weight:600; font-size:1.2rem; }
-    .nav-links { display:flex; list-style:none; gap:1.5rem; }
-    .nav-links li a { text-decoration:none; color:#2c2c2c; font-weight:500; transition:0.2s; }
-    .nav-links li a:hover { color:#2c6e9e; }
+        /* header / navigation */
+        .site-header {
+            padding: 1.5rem 0 1rem 0;
+            border-bottom: 1px solid #eaeaea;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(2px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-    /* hero section */
-    .hero { padding:4rem 0 5rem 0; text-align:center; max-width:900px; margin:0 auto; }
-    .hero-name { font-size:3.5rem; font-weight:700; margin-bottom:1rem; color:#2c4c6c; }
-    .hero-titles { font-size:1.2rem; font-weight:500; color:#3a546d; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:1px; }
-    .hero-description { font-size:1.2rem; color:#2c2e31; margin-bottom:2rem; }
-    .action-row { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; }
-    .btn-more { text-decoration:none; padding:0.8rem 1.8rem; border-radius:40px; background:#111; color:white; font-weight:500; transition:0.25s; border:1px solid #111; display:flex; align-items:center; gap:0.5rem; }
-    .btn-more:hover { background:#2c6e9e; border-color:#2c6e9e; transform:translateY(-2px); box-shadow:0 10px 20px -8px rgba(0,0,0,0.15); }
-    .social-icons { display:flex; gap:1.5rem; align-items:center; justify-content:center; }
-    .social-icon { font-size:1.7rem; color:#2c2c2c; transition:0.2s; }
-    .social-icon:hover { color:#2c6e9e; transform:scale(1.05); }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-    /* footer */
-    .site-footer { padding:2rem 0; font-size:0.85rem; color:#6c6f73; text-align:center; }
+        /* left side: home / logo area */
+        .logo-area {
+            font-weight: 600;
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+        }
 
-    @media (max-width:600px) {
-      .hero-name { font-size:2.8rem; }
-      .hero-titles, .hero-description { font-size:1rem; }
-      .nav-links { gap:1rem; flex-wrap:wrap; justify-content:center; }
-      .action-row { flex-direction:column; }
-    }
-  </style>
+        .logo-area a {
+            text-decoration: none;
+            color: #111;
+            transition: color 0.2s ease;
+        }
+
+        .logo-area a:hover {
+            color: #2c6e9e;
+        }
+
+        /* navigation menu */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            transition: color 0.2s;
+            letter-spacing: -0.2px;
+        }
+
+        .nav-links li a:hover {
+            color: #2c6e9e;
+        }
+
+        /* search icon (Q) */
+        .search-icon a {
+            font-weight: 500;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* main hero section */
+        .hero {
+            padding: 4rem 0 5rem 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-name {
+            font-size: 3.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #1f2b3c, #2c4c6c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-titles {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #3a546d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.8rem;
+            border-left: 3px solid #2c6e9e;
+            padding-left: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #2c2e31;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* button & social row */
+        .action-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #111;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.25s ease;
+            border: 1px solid #111;
+        }
+
+        .btn-more i {
+            transition: transform 0.2s;
+        }
+
+        .btn-more:hover {
+            background-color: #2c6e9e;
+            border-color: #2c6e9e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -8px rgba(0,0,0,0.15);
+        }
+
+        .btn-more:hover i {
+            transform: translateX(4px);
+        }
+
+        /* social icons */
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-icon {
+            font-size: 1.7rem;
+            color: #2c2c2c;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon:hover {
+            color: #2c6e9e;
+            transform: scale(1.05);
+        }
+
+        /* subtle decorative line */
+        .divider {
+            margin-top: 3rem;
+            border-top: 1px solid #e2e2e2;
+        }
+
+        /* footer / minimal credits */
+        .site-footer {
+            padding: 2rem 0 3rem;
+            font-size: 0.85rem;
+            color: #6c6f73;
+            text-align: center;
+        }
+
+        /* responsive design */
+        @media (max-width: 800px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            .hero-name {
+                font-size: 2.8rem;
+            }
+            .hero-titles {
+                font-size: 1rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                gap: 1.2rem;
+                margin-top: 0.5rem;
+            }
+            .action-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-name {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                gap: 0.9rem;
+            }
+            .nav-links li a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* optional subtle background texture */
+        .hero {
+            background: radial-gradient(circle at 0% 30%, rgba(44,110,158,0.02) 0%, rgba(255,255,255,0) 70%);
+        }
+    </style>
 </head>
 <body>
 
 <header class="site-header">
-  <div class="nav-wrapper">
-    <div class="logo-area"><a href="#">⌂ Home</a></div>
-    <ul class="nav-links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Matematică</a></li>
-      <li><a href="#">Applied</a></li>
-      <li><a href="#">Beyond</a></li>
-      <li><a href="#"><i class="fas fa-search"></i></a></li>
-    </ul>
-  </div>
+    <div class="container nav-wrapper">
+        <!-- left side: "Home" label – as shown in original screenshot layout (home link) -->
+        <div class="logo-area">
+            <a href="#" aria-label="Home">⌂ Home</a>
+        </div>
+        <!-- navigation links: ABOUT, BLOG, SCRAPBOOK, PROJECTS, COLLECTIONS + search Q -->
+        <ul class="nav-links">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">SCRAPBOOK</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">COLLECTIONS</a></li>
+            <li class="search-icon"><a href="#" aria-label="Search"><i class="fas fa-search"></i></a></li>
+        </ul>
+    </div>
 </header>
 
 <main>
-  <section class="hero">
-    <h1 class="hero-name">Andrei Pătularu</h1>
-    <div class="hero-titles">Mathematics | Quant | Finance</div>
-    <p class="hero-description">
-      I enjoy exploring mathematics, quantitative finance, and applied math. 
-      I also create notes, tutorials, and olympiad material for high school students.
-    </p>
-    <div class="action-row">
-      <a href="#" class="btn-more">More About Me <i class="fas fa-arrow-right"></i></a>
-      <div class="social-icons">
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-      </div>
+    <div class="container hero">
+        <div class="hero-content">
+            <!-- main name: Dialid Santiago -->
+            <h1 class="hero-name">Dialid Santiago</h1>
+            
+            <!-- tagline / roles: Mathematician | Stats Ph.D. | Quant Developer -->
+            <div class="hero-titles">
+                MATHEMATICIAN  |  STATS PH.D.  |  QUANT  |  DEVELOPER
+            </div>
+            
+            <!-- descriptive paragraph exactly as per screenshot + minor formatting polish -->
+            <p class="hero-description">
+                I love maths, finance, and coding — and I work at the intersection of all three. 
+                In my free time, I enjoy creating open-source projects that explore mathematical models, 
+                data analysis, and visualisation, along with other topics that spark my curiosity.
+            </p>
+            
+            <!-- action row: "More About Me →" button + social icons (in / X) -->
+            <div class="action-row">
+                <a href="#" class="btn-more">
+                    More About Me <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="social-icons">
+                    <!-- LinkedIn "in" icon -->
+                    <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <!-- X (Twitter) icon -->
+                    <a href="#" class="social-icon" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+    
+    <!-- optional subtle divider – mimics clean separation (like in many portfolios) -->
+    <div class="container divider"></div>
 </main>
 
 <footer class="site-footer">
-  ✦ Mathematics, Finance & Curiosity ✦
+    <div class="container">
+        <p>✦ open-source thinker — mathematics, code & curiosity ✦</p>
+    </div>
 </footer>
-
-</body>
-</html>
-  {{ content }}
-</div>
 
 </body>
 </html>
