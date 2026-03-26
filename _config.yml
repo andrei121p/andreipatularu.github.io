@@ -1,4 +1,21 @@
-remote_theme: mmistakes/minimal-mistakes
+title: Andrei Patularu
+email: andreipatularu10@gmail.com
+description: >-
+  Math and more
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # your domain
+twitter_username: yourusername
+github_username:  andreipatularu
 
+# Build settings
+theme: minima
 plugins:
-  - jekyll-include-cache
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
