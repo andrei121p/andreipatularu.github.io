@@ -1,13 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefcf7;
+            color: #1e2a32;
+            line-height: 1.5;
+        }
+
+        :root {
+            --primary: #1f6e8c;
+            --primary-dark: #0e4b64;
+            --accent: #e76f51;
+            --gray-light: #f0e5d8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .site-header {
+            background: rgba(255, 250, 243, 0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--gray-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo a {
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+
+        .logo a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e4e;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Hero (only on homepage) */
+        .hero {
+            padding: 4rem 0 5rem;
+            background: linear-gradient(135deg, #fff6ed 0%, #fffef9 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-name {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #1a3a47;
+            margin-bottom: 1rem;
+        }
+
+        .hero-titles {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #c45c2c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #2c3e4e;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-more:hover {
+            background: var(--accent);
+        }
+
+        .social-icons {
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            color: #3f5e6b;
+            margin-right: 1.2rem;
+            transition: 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .section-sub {
+            color: #5f6c7a;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        /* Cards grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #f3ede5;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0.5rem 0 0.75rem;
+            color: #1f3b44;
+        }
+
+        .card p {
+            color: #4a5b68;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0e5dc;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        /* Resource list */
+        .resource-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .resource-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 60px;
+            border: 1px solid #f0e5d8;
+        }
+
+        .resource-item i {
+            font-size: 1.4rem;
+            color: var(--primary);
+            width: 2rem;
+        }
+
+        .resource-item span {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .resource-item small {
+            color: #a18262;
+            font-size: 0.75rem;
+        }
+
+        /* Posts list */
+        .post-list {
+            list-style: none;
+        }
+
+        .post-list li {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .post-list h3 {
+            margin: 0;
+        }
+
+        .post-list time {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .footer {
+            padding: 2.5rem 0;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .hero-name { font-size: 2.5rem; }
+            .nav-links { gap: 1rem; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
-  {{ content }}
+
+<header class="site-header">
+    <div class="container nav-wrapper">
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">Andrei Patularu</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ '/' | relative_url }}#home">Home</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+            <li><a href="{{ '/' | relative_url }}#posts">Posts</a></li>
+            <li><a href="{{ '/' | relative_url }}#matematica">Matematica Liceu & Olimp.</a></li>
+            <li><a href="{{ '/' | relative_url }}#applications">App of Math</a></li>
+            <li><a href="{{ '/' | relative_url }}#misc">Misceláneos</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    {{ content }}
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>✦ matematică, cod & curiozitate — construit cu ❤️ de Andrei Patularu ✦</p>
+        <p>© 2025 · toate resursele sunt liber accesibile</p>
+    </div>
+</footer>
+
 </body>
 </html>
