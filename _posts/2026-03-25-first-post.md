@@ -1,11 +1,8 @@
 ---
-title: "My First Lecture"
+layout: default
+title: "Primul meu articol"
+date: 2025-03-26
+excerpt: "Un scurt rezumat al articolului."
 ---
 
-# Kirchhoff’s Current Law
-
-We have:
-
-$$ \sum_{i=1}^n I_i = 0 $$
-
-This means currents balance at a node.
+Aici scrii conținutul complet al articolului. Poți folosi **Markdown** sau HTML.
