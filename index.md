@@ -22,19 +22,10 @@ title: "MathMaiden"
     </div>
 </section>
 
-<!-- About section – edit this freely -->
-<section id="about" class="section">
-    <div class="container">
-        <h2 class="section-title">About me</h2>
-        <div class="section-sub">Matematician, educator, programator</div>
-        <p>Scrie aici povestea ta. Explică-ți backgroundul, pasiunile și ceea ce faci.</p>
-    </div>
-</section>
-
 <!-- Articole Matematica section – shows posts with category "matematica" -->
 <section id="articole-matematica" class="section">
     <div class="container">
-        <h2 class="section-title">Articole Matematica</h2>
+        <h2 class="section-title">Posts</h2>
         <div class="section-sub">Resurse pentru liceu, olimpiadă și aplicații</div>
 
         <ul class="post-list">
