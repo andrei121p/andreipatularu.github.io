@@ -8,7 +8,6 @@ title: "MathMaiden"
     <div class="container hero-content">
         <h1 class="hero-name">Andrei‑Eugeniu Pătularu</h1>
         <div class="hero-titles">
-            MATEMATICIAN | PROFESOR | PROGRAMATOR | OLIMPIADIC
         </div>
         <p class="hero-description">
             Îmi pasionează matematica, programarea și educația. Lucrez la intersecția dintre teorie și aplicații practice,
