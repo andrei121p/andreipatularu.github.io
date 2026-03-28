@@ -16,8 +16,8 @@ title: "MathMaiden"
         </p>
         <a href="#about" class="btn-more">Mai multe despre mine <i class="fas fa-arrow-right"></i></a>
         <div class="social-icons">
+            <a href="https://github.com/andrei121p" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/andrei-eugeniu-p%C4%83tularu-aa5b29241/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/andreipatularu" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </section>
