@@ -10,9 +10,7 @@ title: "MathMaiden"
         <div class="hero-titles">
         </div>
         <p class="hero-description">
-            Îmi pasionează matematica, programarea și educația. Lucrez la intersecția dintre teorie și aplicații practice,
-            iar în timpul liber creez resurse open-source pentru pregătirea olimpiadelor, proiecte de analiză de date și
-            vizualizare interactivă. Cred într-o matematică vie, accesibilă și mereu plină de curiozitate.
+            TO DO
         </p>
         <a href="#about" class="btn-more">Mai multe despre mine <i class="fas fa-arrow-right"></i></a>
         <div class="social-icons">
